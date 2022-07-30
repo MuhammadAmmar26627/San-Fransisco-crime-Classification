@@ -66,7 +66,7 @@ def load_saved_artifacts():
     __location=[i.replace(' ','_') for i in __location ]
     __pdDistric=__data_columns[-9:]
     __data_columns=np.array(__data_columns)
-    model=open(r'artifacts\bag_model56.pkl','rb')
-    __model=joblib.load(model)
+#     model=open(r'bag_model56.pkl','rb')
+    __model=joblib.load(r'bag_model56.pkl')
 if __name__=='__main__':
     load_saved_artifacts()
