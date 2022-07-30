@@ -9,8 +9,11 @@ import numpy as np
 import datetime
 import pandas as pd
 # from util import *
-
-
+col1,col2=st.columns([1,1])
+col1.subheader('confusion matrix')
+col1.image([r'Graph\Predict56.png'])
+col2.subheader('correlation matrix')
+col2.image([r'Graph\heatmap_corr.png'])
 import json
 import joblib
 import pandas as pd
