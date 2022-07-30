@@ -12,7 +12,7 @@ from util import *
 
 @st.cache
 def loaddf():
-    df1=pd.read_csv(r'sample.csv',parse_dates=['Dates'],index_col='Dates',usecols=['Category','Dates','lat','lon'])
+    df1=pd.read_csv(r'App/sample.csv',parse_dates=['Dates'],index_col='Dates',usecols=['Category','Dates','lat','lon'])
     df=pd.get_dummies(df1.Category)
     df=pd.concat([df,df1],axis=1)
     return df
@@ -108,13 +108,13 @@ if rad=='About':
     
     
     st.subheader('Crime Rate')
-    st.image([r'Graph\crime.png'])
+    st.image([r'App/Graph/crime.png'])
 
     # st.subheader('Crime Rate')
-    st.image([r'Graph\dataplot.png'])
+    st.image([r'App/Graph/dataplot.png'])
 
     col1,col2=st.columns([1,1])
     col1.subheader('confusion matrix')
-    col1.image([r'Graph\Predict56.png'])
+    col1.image([r'App/Graph/Predict56.png'])
     col2.subheader('correlation matrix')
-    col2.image([r'Graph\heatmap_corr.png'])
+    col2.image([r'App/Graph/heatmap_corr.png'])
