@@ -10,8 +10,7 @@ import datetime
 import pandas as pd
 from util import *
 
-adress_opt=get_location_names()
-pdDistric_opt=get_pdDistric_names()
+
 @st.cache
 def loaddf():
     df1=pd.read_csv(r'sample.csv',parse_dates=['Dates'],index_col='Dates',usecols=['Category','Dates','lat','lon'])
@@ -25,6 +24,8 @@ if rad=='Home':
     st.write('''# San Francisco Crime Classification
 This app predict top 5 crime in *San Francisco*. 
 ''')
+    adress_opt=get_location_names()
+    pdDistric_opt=get_pdDistric_names()
     st.write('***')
     col1,_,col2=st.columns([7,1,7])
     date=col1.date_input('date',value=datetime.date(2013,7,9),min_value=datetime.date(2013,7,9),max_value=datetime.date(2015,5,13))
