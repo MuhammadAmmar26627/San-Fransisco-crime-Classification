@@ -7,4 +7,5 @@ pandas==1.4.3
 seaborn==0.11.2
 streamlit==1.11.1
 streamlit-option-menu==0.3.2
+pickleshare==0.7.5
 json==2.0.9
